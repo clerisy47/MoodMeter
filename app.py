@@ -33,6 +33,10 @@ def predict(text):
     message = f"You are feeling {pred}"
     return message
 
-interface = gr.Interface(fn=predict, inputs='text', outputs='text')
+interface = gr.Interface(fn=predict, 
+                     inputs="text", 
+                     outputs="text", 
+                     title="Sentiment Analysis",
+                     description="Enter a text and get its sentiment polarity.")
 interface.launch()
 
