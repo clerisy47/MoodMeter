@@ -1,11 +1,9 @@
 import joblib 
-from flask import Flask, request, render_template
 import numpy as np
 import spacy
+import gradio as gr
 
 nlp = spacy.load("en_core_web_lg") 
-
-flask_app = Flask(__name__)
 
 class_names = ['Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_healthy']
 model = joblib.load('model1.pkl')
@@ -27,20 +25,14 @@ def key_from_value(dictionary, value):
         if dictionary[key] == value:
             return key
 
-@flask_app.route("/")
-def Home():
-    return render_template("index.html")
 
-@flask_app.route("/predict", methods=["POST"])
-def predict():
-    text = request.form['input-text']
+def predict(text):
     preprocessed_text = preprocess(text)
     pred_value = model.predict([preprocessed_text])
     pred = key_from_value(emotion_class, pred_value)
     message = f"You are feeling {pred}"
-    return render_template("index.html", message=message)
+    return message
 
+interface = gr.Interface(fn=predict, inputs='text', outputs='text')
+interface.launch()
 
-
-if __name__ == "__main__":
-    flask_app.run(debug=True)
