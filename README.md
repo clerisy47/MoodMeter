@@ -44,7 +44,7 @@ Write text in the text field and the application will predict the sentiment of y
 * main.py: This is the Python script that trains the machine learning model using Scikit-learn, Spacy, and TfidfVectorizer.
 
 * model.pkl: This is the pre-trained machine learning model.
-*
+
 * dataset: This directory contain the data used for training the model.
 
 * requirements.txt: This is the text files which contains all the necessary dependencies with their versions.
