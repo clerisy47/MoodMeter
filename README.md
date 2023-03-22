@@ -36,32 +36,26 @@ To run the application, navigate to the root folder and execute the following co
 python app.py
 ```
 Then, open a web browser and go to http://localhost:5000/.
-Upload an image and the application will predict the face in the image using the pre-trained machine learning model.
+Write text in the text field and the application will predict the sentiment of your text using the pre-trained machine learning model.
 
 # Files
-* app.py: This is the Flask web application that serves as the main entry point of the program. It uses the machine learning model to predict the face in an uploaded image.
+* app.py: This is the Gradio web application that serves as the main entry point of the program. It uses the machine learning model to predict the sentiment of the input field.
 
-* main.py: This is the Python script that trains the machine learning model using Scikit-learn, OpenCV, and PyWavelets libraries.
+* main.py: This is the Python script that trains the machine learning model using Scikit-learn, Spacy, and TfidfVectorizer.
 
 * model.pkl: This is the pre-trained machine learning model.
-
-* static/image.png: This is the image which I used in my application.
-
-* templates/index.html: This is the HTML template that defines the layout of the web application.
-
-* test_images: This is the directory which contain test datasets for the classification.
-
-* data_acquisition/web_scraping.py: This is the python code which I used for web scrapping images from Google.
+*
+* dataset: This directory contain the data used for training the model.
 
 * requirements.txt: This is the text files which contains all the necessary dependencies with their versions.
 
 
 # Credits
 * This project was created by Utsav Acharya.
-* The face recognition model was trained webscrapping Google Images.
-* The Haar Cascade classifiers used for face and eye detection were trained by OpenCV.
-* The PyWavelets library was used for wavelet transform.
-* The Flask web framework was used to create the web application.
+* The face recognition model was trained using kaggle dataset jp797498e/twitter-entity-sentiment-analysis.
+* The Spacy, and TfidfVectorizer were used for data preprocessing, cleaning and feature engineering of the text.
+* The Scikit-learn was used for model training.
+* The Gradio web framework was used to create the web application.
 
  
 
