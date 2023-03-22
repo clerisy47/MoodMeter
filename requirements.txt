@@ -1,0 +1,4 @@
+gradio==3.23.0
+joblib==1.1.1
+numpy==1.23.5
+spacy==3.3.1

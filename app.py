@@ -39,4 +39,3 @@ interface = gr.Interface(fn=predict,
                      title="Sentiment Analysis",
                      description="Enter a text and get its sentiment polarity.")
 interface.launch()
-
