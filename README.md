@@ -1,4 +1,4 @@
-# Sentiment-Analysis
+# TuneVibe
 This is a Gradio web application for Sentiment Analysis using Random Forest model that has been trained to recognize emotions of text input. The model was trained using Scikit-learn, Spacy, and TfidfVectorizer.
 
 # Installation
