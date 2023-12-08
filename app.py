@@ -5,7 +5,6 @@ import gradio as gr
 
 nlp = spacy.load("en_core_web_lg") 
 
-class_names = ['Tomato_Early_blight', 'Tomato_Late_blight', 'Tomato_healthy']
 model = joblib.load('model1.pkl')
 
 emotion_class = {'anger':0, 'sadness':1, 'fear':2, 'surprise':3, 'joy':4, 'love':5}
